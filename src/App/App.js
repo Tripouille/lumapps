@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import Header from '../components/Header';
 import mockups from '../Frontend Test.png'
+
 function App() {
 	return (
 		<React.Fragment>
