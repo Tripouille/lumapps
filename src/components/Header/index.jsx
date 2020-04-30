@@ -1,6 +1,5 @@
 import React from 'react';
 import { FlexBox, Alignment } from '@lumx/react';
-import './index.scss';
 import SearchField from '../SearchField';
 
 const Header = () => (
