@@ -18,7 +18,7 @@ function App() {
 			<h3>
 				Stack
 			</h3>
-			<p>
+			<div>
 				In this test, we encourage you to use the technologies that we use in our daily basis:
 				<ul>
 					<li>
@@ -40,7 +40,7 @@ function App() {
 						Webpack and Webpack Dev Server
 					</li>
 				</ul>
-			</p>
+			</div>
 			<p>
 				If you want to use other technologies or add features in order to enhance your application (such as TypeScript, Redux, Jest, Enzyme, responsive design), you are more than welcome to do so.
 			</p>
@@ -49,7 +49,7 @@ function App() {
 				<br />
 				<a href="https://github.com/lumapps/design-system" target="blank">https://github.com/lumapps/design-system</a>
 			</p>
-			<p>
+			<div>
 				When using this component library, please consider the following:
 				<ul>
 					<li>
@@ -59,7 +59,7 @@ function App() {
 						Stick to the UX/UI and development guidelines provided.
 					</li>
 				</ul>
-			</p>
+			</div>
 			<h3>
 				Application
 			</h3>
@@ -85,7 +85,7 @@ function App() {
 			<h3>
 				Rules
 			</h3>
-			<p>
+			<div>
 				<ul>
 					<li>
 						We strongly suggest that you use the technologies suggested under the Stack section. If you want to use another technology such as Angular JS or Vue JS because you do not know React, you can do so, but take into consideration that we do not use them in our daily basis
@@ -103,8 +103,7 @@ function App() {
 						In order to deliver the project, please create a public GitHub repository and upload your code to it.
 					</li>
 				</ul>
-			</p>
-
+			</div>
 		</section>
 	</>
   );
