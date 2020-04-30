@@ -37,6 +37,8 @@ For the information that you will be using, you will need to consume Marvel's Op
 You will need an API key in order to execute these requests. Please use the following one:  
 `8fb61ed0d8ae4cc76943c8d2b8e2ed9c`
 
+NB: In order to use this API key, you have to edit your `/etc/hosts` file, adding this line `127.0.0.1   develop.lumapps.com`.
+
 ### Mockup
 
 ![App mockup](src/Frontend%20Test.png)
