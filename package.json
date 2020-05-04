@@ -5,14 +5,17 @@
   "dependencies": {
     "@lumx/icons": "^0.21.21",
     "@lumx/react": "^0.21.21",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint-config-airbnb": "^18.0.1",
     "node-sass": "^4.14.0"
   },
   "scripts": {
@@ -20,9 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

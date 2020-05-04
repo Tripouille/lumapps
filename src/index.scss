@@ -13,3 +13,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import './App/App.scss';
+@import './components/Header/index.scss';
+@import './components/SearchField/index.scss';
