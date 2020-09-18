@@ -7,7 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Header from '../components/Header';
-import Rules from '../components/Rules';
+import Search from '../components/Search';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
 					exact
 					path="/"
 				>
-					<Rules />
+					<Search />
 				</Route>
 			</Switch>
 		</Router>

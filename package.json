@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@lumx/icons": "^0.21.21",
-    "@lumx/react": "^0.21.21",
+    "@lumx/core": "0.25.15",
+    "@lumx/icons": "0.25.15",
+    "@lumx/react": "0.25.15",
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
