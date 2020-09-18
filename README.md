@@ -15,21 +15,17 @@ In this test, we encourage you to use the technologies that we use in our daily 
 *   Yarn
 *   Webpack and Webpack Dev Server
 
-
 If you want to use other technologies or add features in order to enhance your application (such as TypeScript, Redux, Jest, Enzyme, responsive design), you are more than welcome to do so.
 
-We also ask you to use the following component library called Design System. This is an open source library created by LumApps and that we use in our current product:  
-[https://github.com/lumapps/design-system](https://github.com/lumapps/design-system)
-
-When using this component library, please consider the following:
-
-*   Use the color palette provided by the library.
-*   Stick to the UX/UI and development guidelines provided.
-
+As for using a components library, you have multiple choices:
+- If you already know and use a specific React components library, go ahead, you can use it and save sometime on the development process.
+- If you do not know any library, you can use the following: [https://github.com/lumapps/design-system](https://github.com/lumapps/design-system). This is an open source library created by LumApps and that we use in our current product. You can access the library's documentation by going to https://design.lumapps.com/. You will need a password, please reach out to us in order to get the access code for it.
 
 ### Application
 
-In this technical test, you will be creating a small frontend application that lists the different superheroes and supervillains from Marvel, where you will be able to search for a character based on their name. Upon clicking on a specific result, you will be redirected to a detail page of that character, where you will need to show some information related to that selected character.
+In this technical test, you will be creating a small frontend application that lists the different superheroes and supervillains from Marvel, where you will be able to search for a character based on their name.
+
+**Optionally**, you can add the functionality that upon clicking on a specific result, the user is redirected to a detail page of that character, where you will need to show some information related to that selected character.
 
 For the information that you will be using, you will need to consume Marvel's Open API to retrieve the different characters and their information. You can take a look at the API and how to use it here:  
 [https://developer.marvel.com/docs](https://developer.marvel.com/docs)
