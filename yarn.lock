@@ -1160,42 +1160,65 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@lumx/core@^0.21.21":
-  version "0.21.21"
-  resolved "https://registry.yarnpkg.com/@lumx/core/-/core-0.21.21.tgz#43b11cf92c70feb4725fb7d8ed6fa0d88f52e012"
-  integrity sha512-yKUeEpAlbyms0bEZKUdES3CdaO22GrLYrWYZUWuWVJqW7JeisuEguxvjLWAAB4SCUFKPWYb5X2MEnBukYYwhZg==
+"@lumx/core@0.25.15":
+  version "0.25.15"
+  resolved "https://registry.yarnpkg.com/@lumx/core/-/core-0.25.15.tgz#bcbaaaa8406ea252d7e50081b2d0650b0a259588"
+  integrity sha512-VoE4t3825HcI6rHWj1ovbFOBHzB7iQOm52Uu8bIGiBq8TDfDfMzxBedPSbRp3qaRU/Lz682xGIg/wdYFqTxI5w==
   dependencies:
     classnames "^2.2.6"
     focus-visible "^5.0.2"
-    lodash "^4.17.11"
+    lodash "4.17.19"
     moment "^2.24.0"
     moment-range "^4.0.2"
     sass-mq "^5.0.0"
 
-"@lumx/icons@^0.21.21":
-  version "0.21.21"
-  resolved "https://registry.yarnpkg.com/@lumx/icons/-/icons-0.21.21.tgz#5f386fff4033956bd7bd2340468126b8a933ab03"
-  integrity sha512-QdZXugSWnTofuxHJsy7q2sXU71WvqUzGUc21JkogeV8s0tjPeFTmctqH6swyr28FrWpAoq9c0+DusVSlO/G0Jw==
+"@lumx/core@^0.25.15":
+  version "0.25.16"
+  resolved "https://registry.yarnpkg.com/@lumx/core/-/core-0.25.16.tgz#5eaa8b4e34f0cfdda2aada679f5e8ae18ee5fc1d"
+  integrity sha512-dNGsqDfEb9CKdlP4WaRZdCi6rk5LRgzMSgCE7RtRtyQkgoZID+WZZkWFCG9oJPcqcq1F2gj4RyMOAH/agtzH7w==
+  dependencies:
+    classnames "^2.2.6"
+    focus-visible "^5.0.2"
+    lodash "4.17.19"
+    moment "^2.24.0"
+    moment-range "^4.0.2"
+    sass-mq "^5.0.0"
+
+"@lumx/icons@0.25.15":
+  version "0.25.15"
+  resolved "https://registry.yarnpkg.com/@lumx/icons/-/icons-0.25.15.tgz#7a809f36a39095899a96dfe8f311cec639b9adff"
+  integrity sha512-JjYwEUWKYI73uOCVNMybZeSPZenJuXFFB+MPuhNP4dDXkpRdx8FsnefcmsMMbAScFDkZVLJTxoZmLIIpYGTqWQ==
   dependencies:
     "@mdi/font" "4.2.95"
     "@mdi/js" "4.2.95"
 
-"@lumx/react@^0.21.21":
-  version "0.21.21"
-  resolved "https://registry.yarnpkg.com/@lumx/react/-/react-0.21.21.tgz#b573bfecd9f307618778b4321b6a6f7716c59874"
-  integrity sha512-lSERfokelt5Hw301cOb09tNB7DkQl2ijeFsGLH+BaEhKqQrWetB+jsV8qIxrkdSEXHcUaE3gw+r7kJ2mF6X5kA==
+"@lumx/icons@^0.25.15":
+  version "0.25.16"
+  resolved "https://registry.yarnpkg.com/@lumx/icons/-/icons-0.25.16.tgz#8a79f625815a740049c3351b47e7e69c77bfc519"
+  integrity sha512-8aPPTNPzrQu9BPVszGOeY1v7zAinR2Qx7cFVI7M3iw8EfUNYi1gHGazfTM1WUVkLQVPBN51+HPQZ38gGdRZchg==
   dependencies:
-    "@lumx/core" "^0.21.21"
-    "@lumx/icons" "^0.21.21"
+    "@mdi/font" "4.2.95"
+    "@mdi/js" "4.2.95"
+
+"@lumx/react@0.25.15":
+  version "0.25.15"
+  resolved "https://registry.yarnpkg.com/@lumx/react/-/react-0.25.15.tgz#265055b39ffbf3ff2dfc64d3c31fac45a53f91f7"
+  integrity sha512-Z0+1xKZLDPVPlOnGn+40gwpssKEEvwAyJ0IocO3D1DwKEkeaCwNBlfQZSeCWZv4kjwMnIggplcaEyEJrW5JINA==
+  dependencies:
+    "@lumx/core" "^0.25.15"
+    "@lumx/icons" "^0.25.15"
+    "@popperjs/core" "^2.4.0"
     body-scroll-lock "^2.6.4"
     classnames "^2.2.6"
     focus-trap-react "^6.0.0"
     focus-visible "^5.0.2"
-    lodash "^4.17.15"
+    lodash "4.17.19"
     moment "^2.24.0"
     moment-range "^4.0.2"
     react "^16.8.5"
     react-dom "^16.8.5"
+    react-is "^16.8.5"
+    react-popper "^2.2.3"
     uuid "^3.3.2"
 
 "@mdi/font@4.2.95":
@@ -1220,6 +1243,11 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
+
+"@popperjs/core@^2.4.0":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
+  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.3"
@@ -6703,6 +6731,11 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
+lodash@4.17.19:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+
 "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5, lodash@~4.17.12:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
@@ -8960,10 +8993,23 @@ react-error-overlay@^6.0.7:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
 
-react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+react-fast-compare@^3.0.1:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
+react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.5:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-popper@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-2.2.3.tgz#33d425fa6975d4bd54d9acd64897a89d904b9d97"
+  integrity sha512-mOEiMNT1249js0jJvkrOjyHsGvqcJd3aGW/agkiMoZk3bZ1fXN1wQszIQSjHIai48fE67+zwF8Cs+C4fWqlfjw==
+  dependencies:
+    react-fast-compare "^3.0.1"
+    warning "^4.0.2"
 
 react-router-dom@^5.1.2:
   version "5.1.2"
@@ -10896,6 +10942,13 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^4.0.2:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"
 
 watchpack@^1.6.0:
   version "1.6.0"
