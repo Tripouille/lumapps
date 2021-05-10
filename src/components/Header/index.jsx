@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { FlexBox, Alignment } from '@lumx/react';
+import { FlexBox, Alignment, Button } from '@lumx/react';
 import SearchField from '../SearchField';
 
-const Header = () => (
+const Header = ({ searchQuery, setSearchQuery, onSearch }) => (
 	<header className="lumx-spacing-padding-big header">
 		<FlexBox vAlign={Alignment.right}>
-			<SearchField />
+			<SearchField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+			<Button onClick={onSearch}>Search</Button>
 		</FlexBox>
 	</header>
 );
