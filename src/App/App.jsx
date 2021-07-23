@@ -7,7 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Header from '../components/Header';
-import Search from '../components/Search';
+import SearchResult from '../components/SearchResult';
 import { getCharacters } from '../api';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
   const [characters, setCharacters] = React.useState([]);
 
   const onSearch = async () => {
+    console.log("onSearch");
     if (searchQuery !== '') {
       const chars = await getCharacters({ nameStartsWith: searchQuery });
 
@@ -27,11 +28,8 @@ function App() {
 		<Router>
 			<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={onSearch} />
 			<Switch>
-				<Route
-					exact
-					path="/"
-				>
-					<Search searchQuery={searchQuery} characters={characters} />
+				<Route exact path="/">
+					<SearchResult searchQuery={searchQuery} characters={characters} />
 				</Route>
 			</Switch>
 		</Router>
