@@ -17,7 +17,7 @@ function App() {
   const onSearch = async () => {
     console.log("onSearch");
     if (searchQuery !== '') {
-      const chars = await getCharacters({ nameStartsWith: searchQuery });
+      const chars = await getCharacters({ nameStartsWith: searchQuery, orderBy: 'name' });
 
       setCharacters(chars);
     }

@@ -17,7 +17,9 @@ const get = (url, query) => instance.get(url, {
 });
 
 function setDescription(description) {
-  return description.trim().length > 0 ? description : 'No description available';
+  const descriptionTrimed = description.trim()
+
+  return descriptionTrimed.length > 0 ? descriptionTrimed : 'No description available';
 }
 
 export async function getCharacters(params) {
@@ -27,7 +29,7 @@ export async function getCharacters(params) {
     id: character.id,
     description: setDescription(character.description),
     name: character.name,
-    thumbnail: `${character.thumbnail.path}.${character.thumbnail.extension}`,
+    image: `${character.thumbnail.path}.${character.thumbnail.extension}`,
   }));
 }
 
