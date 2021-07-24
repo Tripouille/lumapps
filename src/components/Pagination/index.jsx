@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from '@lumx/react';
+import { NavLink } from 'react-router-dom';
 
-
-const Pagination = ({ charactersPerPage, totalCharacters, setActualPage }) => {
+const Pagination = ({ charactersPerPage, totalCharacters }) => {
 	const lastPageNumber = Math.ceil(totalCharacters / charactersPerPage)
 	const pageNumbers = [];
 
@@ -10,14 +10,14 @@ const Pagination = ({ charactersPerPage, totalCharacters, setActualPage }) => {
 		pageNumbers.push(i);
 	}
 	
-	const clickHandler = ({ target }) => {
-		setActualPage(target.textContent);
-	}
-
 	return (
 		<nav id="pagination">
 			{
-				pageNumbers.map((number) => <Button key={number} className="page-number" onClick={clickHandler}>{number}</Button>)
+				pageNumbers.map((number) => (
+					<NavLink className="navlink" key={number} to={`/${number}`}>
+						<Button className="navlink-button">{number}</Button>
+					</NavLink>
+				))
 			}
 		</nav>
 	)
