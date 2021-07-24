@@ -33,4 +33,27 @@ export async function getCharacters(params) {
   }));
 }
 
+function formatDate(rawDate) {
+  const date = new Date(rawDate);
+  let day = date.getDate().toString();
+  let month = (1 + date.getMonth()).toString();
+  let year = date.getFullYear();
+
+  day = day.length > 1 ? day : '0' + day;
+  month = month.length > 1 ? month : '0' + month;
+
+  return ([day, month, year].includes(NaN) ? "Unknown" : `${day}/${month}/${year}`);
+}
+
+export async function getCharacterComics(params) {
+  const { data: characterComicsData } = await get('comics', params);
+
+  console.log(characterComicsData.data);
+  return characterComicsData.data.results.map((comic) => ({
+    title: comic.title,
+    price: comic.prices[0].price,
+    onsale: formatDate(comic.dates.find((date) => date.type === "onsaleDate").date),
+  }));
+}
+
 export { instance as api, get };

@@ -22,15 +22,12 @@ $right-column: 30%;
 			* {
 				margin: 10px;
 			}
-
 			#previous-page-button {
 				background-color: darkblue;
+				box-shadow: 2px 2px 5px black;
 				&:hover {
 					background-color: #2885f6;
 				}
-			}
-			#character-name {
-	
 			}
 			#character-description {
 				margin-bottom: 20px;
@@ -48,6 +45,7 @@ $right-column: 30%;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		
 		#character-whatever {
 			width: $left-column;
 			border: solid 2px black;
@@ -55,6 +53,9 @@ $right-column: 30%;
 		#character-latest-comics {
 			width: $right-column;
 			border: solid 2px black;
+			#character-latest-comics-title {
+				margin: 5px 10px;
+			}
 		}
 	}
 }

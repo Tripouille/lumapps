@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { Alignment, Button, FlexBox } from '@lumx/react';
+import Comic from '../Comic'
 
-const CharacterDetails = ({ characters }) => {
+const CharacterDetails = ({ characters, characterComics }) => {
 	const { id } = useParams();
 	const characterInfos = characters.find((character) => character.id === parseInt(id));
 	const history = useHistory();
@@ -23,7 +24,12 @@ const CharacterDetails = ({ characters }) => {
 			</FlexBox>
 			<FlexBox id="character-more-flexbox" vAlign={Alignment.center}>
 				<div id="character-whatever">whatever</div>
-				<div id="character-latest-comics">latest-comics</div>
+				<div id="character-latest-comics">
+					<h2 id="character-latest-comics-title" >Latest comics</h2>
+					{
+						characterComics.map((comic, index) => <Comic key={index} infos={comic} />)
+					}
+				</div>
 			</FlexBox>
 		</FlexBox>
 	)

@@ -8,12 +8,13 @@ import {
 } from 'react-router-dom';
 import Header from '../components/Header';
 import SearchResult from '../components/SearchResult';
-import { getCharacters } from '../api';
+import { getCharacters, getCharacterComics } from '../api';
 import CharacterDetails from '../components/CharacterDetails';
 
 function App() {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [characters, setCharacters] = React.useState([]);
+	const [characterComics, setCharacterComics] = React.useState(['none']);
 
   const onSearch = async () => {
     console.log("onSearch");
@@ -24,21 +25,26 @@ function App() {
     }
   };
 
+  const onDetails = async (characterId) => {
+		const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
+    
+		setCharacterComics(comics)
+	}
+
   return (
 	<>
 		<Router>
 			<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={onSearch} />
 			<Switch>
 				<Route exact path="/:actualPage">
-					<SearchResult characters={characters} />
+					<SearchResult characters={characters} onDetails={onDetails} />
 				</Route>
 
         <Route exact path="/character/:id">
-          <CharacterDetails characters={characters} />
+          <CharacterDetails characters={characters} characterComics={characterComics} />
         </Route>
 			</Switch>
 		</Router>
-
 	</>
   );
 }
