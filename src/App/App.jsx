@@ -30,10 +30,10 @@ function App() {
 			<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={onSearch} />
 			<Switch>
 				<Route exact path="/:actualPage">
-					<SearchResult searchQuery={searchQuery} characters={characters} />
+					<SearchResult characters={characters} />
 				</Route>
 
-        <Route path="/character/:id">
+        <Route exact path="/character/:id">
           <CharacterDetails characters={characters} />
         </Route>
 			</Switch>

@@ -22,4 +22,4 @@ const SearchResult = ({ characters }) => {
 	);
 };
 
-export default SearchResult;
+export default React.memo(SearchResult);
