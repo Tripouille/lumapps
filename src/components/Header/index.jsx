@@ -26,7 +26,7 @@ const Header = ({ searchQuery, setSearchQuery, onSearch, resultsPath }) => {
 				</FlexBox>
 			</FlexBox>
 		</header>
-	)
+	);
 };
 
 export default Header;

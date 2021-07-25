@@ -9,7 +9,7 @@ const ComicsCollection = ({ comics, title }) => {
 					comics.map((comic, index) => <Comic key={index} infos={comic} />)
 				}
 		</div>
-	)
+	);
 }
 
 export default ComicsCollection;

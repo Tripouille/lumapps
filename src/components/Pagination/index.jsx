@@ -20,7 +20,7 @@ const Pagination = ({ itemPerPage, itemNumber, path }) => {
 				))
 			}
 		</nav>
-	)
+	);
 }
 
 export default Pagination

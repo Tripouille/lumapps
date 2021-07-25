@@ -11,10 +11,5 @@ $right-column: 30%;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
-		
-		#character-whatever {
-			width: $left-column;
-			border: solid 2px black;
-		}
 	}
 }

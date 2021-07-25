@@ -17,7 +17,7 @@ const CharacterHeader = ({ character }) => {
 			</FlexBox>
 			<img id="character-image" src={character.image} alt={character.name}></img>
 		</FlexBox>
-	)
+	);
 }
 
 export default CharacterHeader;

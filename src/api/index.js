@@ -48,11 +48,19 @@ function formatDate(rawDate) {
 export async function getCharacterComics(params) {
   const { data: characterComicsData } = await get('comics', params);
 
-  console.log(characterComicsData.data);
   return characterComicsData.data.results.map((comic) => ({
     title: comic.title,
-    price: comic.prices[0].price,
+    price: comic.prices.find((price) => price.type === "printPrice").price,
     onsale: formatDate(comic.dates.find((date) => date.type === "onsaleDate").date),
+  }));
+}
+
+export async function getCharacterEvents(params) {
+  const { data: characterEventsData } = await get('events', params);
+
+  return characterEventsData.data.results.map((event) => ({
+    title: event.title,
+    description: event.description,
   }));
 }
 

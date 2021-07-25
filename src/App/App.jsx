@@ -8,14 +8,15 @@ import {
 } from 'react-router-dom';
 import Header from '../components/Header';
 import SearchResult from '../components/SearchResult';
-import { getCharacters, getCharacterComics } from '../api';
+import { getCharacters, getCharacterComics, getCharacterEvents } from '../api';
 import CharacterDetails from '../components/CharacterDetails';
 
 function App() {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [characters, setCharacters] = React.useState([]);
-	const [characterComics, setCharacterComics] = React.useState([]);
 	const [character, setCharacter] = React.useState({});
+	const [characterComics, setCharacterComics] = React.useState([]);
+	const [characterEvents, setcharacterEvents] = React.useState([]);
   const resultsPath = "/results/";
   const detailsPath = "/details";
 
@@ -29,12 +30,14 @@ function App() {
   };
   
   const onDetails = async (characterId) => {
-    console.log("onDetails");
-    const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
+    console.log("onDetails", characterId);
     const character = characters.find((character) => character.id === characterId);
+    const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
+    const events = await getCharacterEvents({characters: characterId, orderBy: '-modified'});
     
-    setCharacter(character)
-		setCharacterComics(comics)
+    setCharacter(character);
+		setCharacterComics(comics);
+    setcharacterEvents(events);
 	}
 
   return (
@@ -46,7 +49,7 @@ function App() {
 					<SearchResult characters={characters} resultsPath={resultsPath} onDetails={onDetails} detailsPath={detailsPath} />
 				</Route>
         <Route exact path={detailsPath}>
-          <CharacterDetails character={character} characterComics={characterComics} />
+          <CharacterDetails character={character} characterComics={characterComics} characterEvents={characterEvents} />
         </Route>
 			</Switch>
 		</Router>
