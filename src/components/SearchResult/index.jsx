@@ -5,18 +5,18 @@ import { useParams } from 'react-router';
 import Character from '../Character';
 import Pagination from '../Pagination';
 
-const SearchResult = ({ characters, onDetails }) => {
-	const { actualPage } = useParams();
+const SearchResult = ({ characters, resultsPath, onDetails, detailsPath }) => {
+	const { currentPage } = useParams();
 	const charactersPerPage = 4;
-	const charactersOffset = (actualPage - 1) * charactersPerPage;
+	const charactersOffset = (currentPage - 1) * charactersPerPage;
 	const slicedCharacters = characters.slice(charactersOffset, charactersOffset + charactersPerPage);
 
 	return (
 		<section className="lumx-spacing-padding-horizontal-huge">
 			{
-				slicedCharacters.map((characterInfos, index) => <Character key={index} infos={characterInfos} onDetails={onDetails} />)
+				slicedCharacters.map((characterInfos, index) => <Character key={index} infos={characterInfos} onDetails={onDetails} detailsPath={detailsPath} />)
 			}
-			<Pagination charactersPerPage={charactersPerPage} totalCharacters={characters.length}></Pagination>
+			<Pagination itemPerPage={charactersPerPage} itemNumber={characters.length} path={resultsPath} ></Pagination>
 		</section>
 	);
 };

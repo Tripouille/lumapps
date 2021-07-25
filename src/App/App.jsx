@@ -14,34 +14,39 @@ import CharacterDetails from '../components/CharacterDetails';
 function App() {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [characters, setCharacters] = React.useState([]);
-	const [characterComics, setCharacterComics] = React.useState(['none']);
+	const [characterComics, setCharacterComics] = React.useState([]);
+	const [character, setCharacter] = React.useState({});
+  const resultsPath = "/results/";
+  const detailsPath = "/details";
 
   const onSearch = async () => {
     console.log("onSearch");
     if (searchQuery !== '') {
       const chars = await getCharacters({ nameStartsWith: searchQuery.trim(), orderBy: 'name' });
-
+      
       setCharacters(chars);
     }
   };
-
+  
   const onDetails = async (characterId) => {
-		const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
+    console.log("onDetails");
+    const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
+    const character = characters.find((character) => character.id === characterId);
     
+    setCharacter(character)
 		setCharacterComics(comics)
 	}
 
   return (
 	<>
 		<Router>
-			<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={onSearch} />
+			<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSearch={onSearch} resultsPath={resultsPath} />
 			<Switch>
-				<Route exact path="/:actualPage">
-					<SearchResult characters={characters} onDetails={onDetails} />
+				<Route exact path={`${resultsPath}:currentPage`}>
+					<SearchResult characters={characters} resultsPath={resultsPath} onDetails={onDetails} detailsPath={detailsPath} />
 				</Route>
-
-        <Route exact path="/character/:id">
-          <CharacterDetails characters={characters} characterComics={characterComics} />
+        <Route exact path={detailsPath}>
+          <CharacterDetails character={character} characterComics={characterComics} />
         </Route>
 			</Switch>
 		</Router>
