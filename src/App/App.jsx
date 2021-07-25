@@ -21,7 +21,6 @@ function App() {
   const detailsPath = "/details";
 
   const onSearch = async () => {
-    console.log("onSearch");
     if (searchQuery !== '') {
       const chars = await getCharacters({ nameStartsWith: searchQuery.trim(), orderBy: 'name' });
       
@@ -30,7 +29,6 @@ function App() {
   };
   
   const onDetails = async (characterId) => {
-    console.log("onDetails", characterId);
     const character = characters.find((character) => character.id === characterId);
     const comics = await getCharacterComics({characters: characterId, orderBy: '-onsaleDate', limit: 4});
     const events = await getCharacterEvents({characters: characterId, orderBy: '-modified'});

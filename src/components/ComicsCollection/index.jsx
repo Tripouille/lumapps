@@ -5,9 +5,9 @@ const ComicsCollection = ({ comics, title }) => {
 	return (
 		<div id="comics-collection">
 			<h2 id="collection-title">{title}</h2>
-				{
-					comics.map((comic, index) => <Comic key={index} infos={comic} />)
-				}
+			{
+				comics.map((comic, index) => <Comic key={index} infos={comic} />)
+			}
 		</div>
 	);
 }
